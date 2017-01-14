@@ -380,6 +380,24 @@ public class Controller {
                 return 1;
             }
         }
+        if(field[1][1] == selfMark && field[0][2] == OpponentMark && field[2][0] == OpponentMark){
+            if(field[0][1] == L_FREE){
+                field[0][1] = selfMark;
+                return 1;
+            }else
+            if(field[2][1] == L_FREE){
+                field[2][1] = selfMark;
+                return 1;
+            }else
+            if(field[1][2] == L_FREE){
+                field[1][2] = selfMark;
+                return 1;
+            }else
+            if(field[1][0] == L_FREE){
+                field[1][0] = selfMark;
+                return 1;
+            }
+        }
         return 0;
     }
 
